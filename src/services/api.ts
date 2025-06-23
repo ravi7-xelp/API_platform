@@ -1,26 +1,44 @@
 import axios from 'axios';
-import { Api } from '../types';
 
 // Configure axios base URL
 axios.defaults.baseURL = 'http://localhost:8000';
 
-export const getApis = () => axios.get('/apis');
-
-export const uploadFile = (file: File) => {
+export const uploadFile = async (file: File) => {
   const formData = new FormData();
   formData.append('file', file);
-  return axios.post('/apis/upload', formData, {
+  
+  const response = await axios.post('/apis/upload', formData, {
     headers: {
       'Content-Type': 'multipart/form-data',
     },
   });
+  
+  return response.data;
 };
 
-export const runAllApis = () => axios.post('/apis/run-all');
+export const getApis = async () => {
+  const response = await axios.get('/apis');
+  return response.data.apis || [];
+};
 
-export const runApiTest = (apiId: string) => axios.post(`/apis/${apiId}/run`);
+export const runApiTest = async (apiId: string) => {
+  const response = await axios.post(`/apis/${apiId}/run`);
+  return response.data;
+};
 
-export const runPerformanceTest = (apiId: string, numRequests: number = 10) => 
-  axios.post(`/apis/${apiId}/performance`, { num_requests: numRequests });
+export const runAllApis = async () => {
+  const response = await axios.post('/apis/run-all');
+  return response.data;
+};
 
-export const getTestReport = () => axios.get('/apis/report');
+export const runPerformanceTest = async (apiId: string, numRequests: number = 10) => {
+  const response = await axios.post(`/apis/${apiId}/performance`, null, {
+    params: { num_requests: numRequests }
+  });
+  return response.data;
+};
+
+export const getTestReport = async () => {
+  const response = await axios.get('/apis/report');
+  return response.data;
+};

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Table, Button, InputNumber, Input, Space, message, Tooltip, Progress } from 'antd';
+import { Table, Button, InputNumber, Input, Space, Tooltip, Progress } from 'antd';
 import { getApis } from '../services/api';
 import { startLoadTest, stopLoadTest, getLoadTestStatus, downloadLoadTestReport } from '../services/loadtest';
 import { Api } from '../types';
