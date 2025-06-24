@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// Configure axios base URL
-axios.defaults.baseURL = 'http://localhost:8000';
+// Configure axios base URL - using HTTPS to match frontend protocol
+axios.defaults.baseURL = 'https://localhost:8000';
 
 export const uploadFile = async (file: File) => {
   const formData = new FormData();
