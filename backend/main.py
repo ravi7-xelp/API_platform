@@ -26,7 +26,7 @@ app = FastAPI(title="API Testing Automation Platform")
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # React frontend URL
+    allow_origins=["http://localhost:3000", "https://localhost:3000"],  # Added HTTPS support
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -804,4 +804,4 @@ async def loadtest_report(format: str = "json"):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000) 
+    uvicorn.run(app, host="0.0.0.0", port=8000)
