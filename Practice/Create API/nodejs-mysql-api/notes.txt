@@ -1,0 +1,15 @@
+Install sequelize => ORM (object relational Mapping) ==> with this we can talk to database easily
+Iniatialize sequelize => sequelize init
+
+----------------------------------------------------------------
+npm install --save mysql -> to install MySQL in project
+
+----------------------------------------------------------------
+Create module for db TABLES
+For creating the posts table we need to create post model for that use bellow command to create the model and migrations.
+
+Run cmnd in terminal  [ sequelize module:generate --name Post --atributes title:string, context:text, imageUrl:string, categoryId:integer, userId:integer ]
+
+here name = name of file, atributes = collumn headers.
+
+----------------------------------------------------------------

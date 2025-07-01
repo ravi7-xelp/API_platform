@@ -1,0 +1,232 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Practice_CRUD_Operations",
+    "collectionId": "775f1511-30fa-4eec-9b6d-eae7c477cbff",
+    "dateExported": "2024-04-20T18:30:43.168Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "7db3629d-6bbf-4fc3-9be5-11aec73b5379",
+            "name": "POST_CRUD",
+            "containerId": "",
+            "created": "2024-04-20T16:55:30.266Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "49c8a8b5-6888-4241-8525-a6687ddd5bfc",
+            "name": "todos-CRUD",
+            "containerId": "",
+            "created": "2024-04-20T16:55:50.692Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "be105974-5bab-40f1-8875-59ccb040bb71",
+            "colId": "775f1511-30fa-4eec-9b6d-eae7c477cbff",
+            "containerId": "49c8a8b5-6888-4241-8525-a6687ddd5bfc",
+            "name": "todos/1",
+            "url": "https://jsonplaceholder.typicode.com/todos/1",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-04-20T16:50:47.277Z",
+            "modified": "2024-04-20T16:51:17.474Z",
+            "headers": []
+        },
+        {
+            "_id": "953982b7-6ecd-4331-8f4b-d1e12611183e",
+            "colId": "775f1511-30fa-4eec-9b6d-eae7c477cbff",
+            "containerId": "49c8a8b5-6888-4241-8525-a6687ddd5bfc",
+            "name": "todos",
+            "url": "https://jsonplaceholder.typicode.com/todos",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-04-20T16:52:30.775Z",
+            "modified": "2024-04-20T16:55:01.492Z",
+            "headers": []
+        },
+        {
+            "_id": "8abe70ff-9b15-4255-833d-388354ad6050",
+            "colId": "775f1511-30fa-4eec-9b6d-eae7c477cbff",
+            "containerId": "7db3629d-6bbf-4fc3-9be5-11aec73b5379",
+            "name": "posts/1 - Get one post",
+            "url": "https://jsonplaceholder.typicode.com/posts/1",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-04-20T16:56:44.530Z",
+            "modified": "2024-04-20T16:56:50.361Z",
+            "headers": []
+        },
+        {
+            "_id": "56ad44e0-5a95-45ae-aa71-68e9df3cd69d",
+            "colId": "775f1511-30fa-4eec-9b6d-eae7c477cbff",
+            "containerId": "7db3629d-6bbf-4fc3-9be5-11aec73b5379",
+            "name": "posts - Get many posts",
+            "url": "https://jsonplaceholder.typicode.com/posts",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-04-20T16:57:03.462Z",
+            "modified": "2024-04-20T16:57:07.676Z",
+            "headers": []
+        },
+        {
+            "_id": "cc1a0917-ceb7-4bfa-a14f-2c3ba240a2e1",
+            "colId": "775f1511-30fa-4eec-9b6d-eae7c477cbff",
+            "containerId": "7db3629d-6bbf-4fc3-9be5-11aec73b5379",
+            "name": "post - Create post",
+            "url": "https://jsonplaceholder.typicode.com/posts",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2024-04-20T17:14:08.094Z",
+            "modified": "2024-04-20T17:19:15.620Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"title\": \"foo\",\r\n  \"body\": \"bar\",\r\n  \"userId\": 1\r\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "8fb673cd-de04-4541-b47c-5e2721750068",
+            "colId": "775f1511-30fa-4eec-9b6d-eae7c477cbff",
+            "containerId": "7db3629d-6bbf-4fc3-9be5-11aec73b5379",
+            "name": "post/1 - update post",
+            "url": "https://jsonplaceholder.typicode.com/posts/1",
+            "method": "PUT",
+            "sortNum": 120000,
+            "created": "2024-04-20T17:42:20.352Z",
+            "modified": "2024-04-20T17:46:31.871Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"userId\": 1,\n  \"id\": 1,\n  \"title\": \"Unraveling the Mysteries of Dark Matter: A Cosmic Detective Story\",\n  \"body\": \"quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\"\n  // Important: resource will not be really updated on the server but it will be faked as if.\n\n}\n\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "dfb8328c-c88e-4563-80c3-3ee3b0a10b28",
+            "colId": "775f1511-30fa-4eec-9b6d-eae7c477cbff",
+            "containerId": "7db3629d-6bbf-4fc3-9be5-11aec73b5379",
+            "name": "post - Patching a resource",
+            "url": "https://jsonplaceholder.typicode.com/posts/1",
+            "method": "PATCH",
+            "sortNum": 140000,
+            "created": "2024-04-20T17:47:59.095Z",
+            "modified": "2024-04-20T17:48:50.936Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"foo\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "4919b311-94a2-4970-9170-b816d752d4ad",
+            "colId": "775f1511-30fa-4eec-9b6d-eae7c477cbff",
+            "containerId": "7db3629d-6bbf-4fc3-9be5-11aec73b5379",
+            "name": "post - Deleting a resource",
+            "url": "https://jsonplaceholder.typicode.com/posts/1",
+            "method": "DELETE",
+            "sortNum": 150000,
+            "created": "2024-04-20T17:49:45.411Z",
+            "modified": "2024-04-20T17:50:13.781Z",
+            "headers": []
+        },
+        {
+            "_id": "a2b5f6a8-8936-4a94-81c4-da50f02a84ce",
+            "colId": "775f1511-30fa-4eec-9b6d-eae7c477cbff",
+            "containerId": "7db3629d-6bbf-4fc3-9be5-11aec73b5379",
+            "name": "posts?userId=1- Filtering resources",
+            "url": "https://jsonplaceholder.typicode.com/posts?userId=1",
+            "method": "GET",
+            "sortNum": 190000,
+            "created": "2024-04-20T17:51:15.636Z",
+            "modified": "2024-04-20T18:06:28.729Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "userId",
+                    "value": "1",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "e34f4a1d-670f-4a0f-bf8e-bb60465b8c96",
+            "colId": "775f1511-30fa-4eec-9b6d-eae7c477cbff",
+            "containerId": "7db3629d-6bbf-4fc3-9be5-11aec73b5379",
+            "name": "Filter Resourses - title",
+            "url": "https://jsonplaceholder.typicode.com/posts?title=eum et est occaecati",
+            "method": "GET",
+            "sortNum": 200000,
+            "created": "2024-04-20T18:07:01.650Z",
+            "modified": "2024-04-20T18:09:33.793Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [
+                {
+                    "name": "title",
+                    "value": "eum et est occaecati",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "db08cfd8-219d-4d2e-a9d5-a1fb3cb95a96",
+            "colId": "775f1511-30fa-4eec-9b6d-eae7c477cbff",
+            "containerId": "7db3629d-6bbf-4fc3-9be5-11aec73b5379",
+            "name": "Fiter resouses - id's",
+            "url": "https://jsonplaceholder.typicode.com/posts?id=98",
+            "method": "GET",
+            "sortNum": 210000,
+            "created": "2024-04-20T18:09:53.525Z",
+            "modified": "2024-04-20T18:10:45.217Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "98",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "ca4fcfeb-1a1d-476d-9b3e-d052ccdaa5d3",
+            "colId": "775f1511-30fa-4eec-9b6d-eae7c477cbff",
+            "containerId": "7db3629d-6bbf-4fc3-9be5-11aec73b5379",
+            "name": "Fiter resources - 2 parameters",
+            "url": "https://jsonplaceholder.typicode.com/posts?userId=1&id=10",
+            "method": "GET",
+            "sortNum": 220000,
+            "created": "2024-04-20T18:11:13.405Z",
+            "modified": "2024-04-20T18:13:04.089Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "userId",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "id",
+                    "value": "10",
+                    "isPath": false
+                }
+            ]
+        }
+    ],
+    "ref": "ZMzsTCPHdows1PGqTVpFWS_JIn_IO6lZ7F2j17lQTf-vsBOMqww7nUWvJPSsV8J-iZHmCyDD1fPphp6T-vSTMQ"
+}

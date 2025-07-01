@@ -1,0 +1,326 @@
+case 'ClincalDatatUS':
+    return array_map(function ($user) {
+        return [
+            'ID' => $user['id'],
+            'Catailyst Drug Candidate ID' => true,
+            'Drug Name (original)' => $user['Title'],
+            'AssetName' => $user['Acronym'],
+            'Company' => $user['SponsorCollaborators'],
+            'Alt Names' => $user['OtherIDs'],
+            'Latest Update' => $user['LastUpdatePosted'],
+            'Originator' => null,
+            'Developer' => null,
+            'Class' => null,
+            'Therapeutic Modality' => $user['StudyType'],
+            'Mechanism of Action' => null,
+            'New Molecular Entity' => false,
+            'Indication' => $user['Conditions'],
+            'Development Stage' => $user['Phases'],
+            'Recent News' => null,
+            'Category' => null,
+            'Dev Stage Rank' => null,
+            'Therapeutic Area' => null,
+            'Orphan Drug' => false,
+            'Research Program' => null
+        ];
+    }, $users);
+
+
+case 'Japan_clinical_trails_latest':
+    return array_map(function ($user) {
+        return [
+            'ID' => $user['id'],
+            'Receipt number' => $user['Receipt_number'],
+            'Unique ID issued by UMIN' => $user['Unique_ID_issued_by_UMIN'],
+            'Public title' => $user['Public_title'],
+            'Acronym' => $user['Acronym'],
+            'Scientific title' => $user['Scientific_Title'],
+            'Region' => $user['Region'],
+            'Condition' => $user['Condition'],
+            'Classification by specialty' => $user['Classification_by_specialty'],
+            'Classification by malignancy' => $user['Classification_by_malignancy'],
+            'Genomic information' => $user['Genomic_information'],
+            'Narrative objectives' => $user['Narrative_objectives1'],
+            'Basic objectives' => $user['Basic_objectives2'],
+            'user characteristics 1' => $user['user_characteristics_1'],
+            'user characteristics 2' => $user['user_characteristics_2'],
+            'Developmental phase' => $user['Developmental_phase'],
+            'Primary outcomes' => $user['Primary_outcomes'],
+            'Key secondary outcomes' => $user['Key_secondary_outcomes'],
+            'Study type' => $user['Study_type'],
+            'Basic design' => $user['Basic_design'],
+            'Randomization' => $user['Randomization'],
+            'Randomization unit' => $user['Randomization_unit'],
+            'Blinding' => $user['Blinding'],
+            'Control' => $user['Control'],
+            'Stratification' => $user['Stratification'],
+            'Dynamic allocation' => $user['Dynamic_allocation'],
+            'Institution consideration' => $user['Institution_consideration'],
+            'Blocking' => $user['Blocking'],
+            'Concealment' => $user['Concealment'],
+            'Number of arms' => $user['No._of_arms'],
+            'Purpose of intervention' => $user['Purpose_of_intervention'],
+            'Type of intervention' => $user['Type_of_intervention'],
+            'Interventions/Control 1' => $user['Interventions/Control_1'],
+            'Interventions/Control 2' => $user['Interventions/Control_2'],
+            'Age lower limit' => $user['Age-lower_limit'],
+            'Age upper limit' => $user['Age-upper_limit'],
+            'Gender' => $user['Gender'],
+            'Key inclusion criteria' => $user['Key_inclusion_criteria'],
+            'Key exclusion criteria' => $user['Key_exclusion_criteria'],
+            'Target sample size' => $user['Target_sample_size'],
+            'Institute' => $user['Institute'],
+            'Organization' => $user['Organization'],
+            'Secondary IDs' => $user['Secondary_IDs'],
+            'Study ID 1' => $user['Study_ID_1'],
+            'Org. issuing International ID 1' => $user['Org._issuing_International_ID_1'],
+            'IND to MHLW' => $user['IND_to_MHLW'],
+            'Institutions' => $user['Institutions'],
+            'Date of disclosure of the study information' => $user['Date_of_disclosure_of_the_study_information'],
+            'Publication of results' => $user['Publication_of_results'],
+            'URL related to results and publications' => $user['URL_related_to_results_and_publications'],
+            'Recruitment status' => $user['Recruitment_status'],
+            'Date of protocol fixation' => $user['Date_of_protocol_fixation'],
+            'Anticipated user start date' => $user['Anticipated_user_start_date'],
+            'Last follow-up date' => $user['Last_follow-up_date'],
+            'Other related information' => $user['Other_related_information'],
+            'Registered date' => $user['Registered_date'],
+            'Last modified on' => $user['Last_modified_on'],
+            'URL (English)' => $user['URL(English)'],
+        ];
+    }, $users);
+
+case 'ind CombOrphan 1':
+    return array_map(function ($user) {
+        return [
+            'ID' => $user['id'],
+            'Catailyst Drug Candidate ID' => true,
+            'Drug Name (original)' => $user['Title'],
+            'AssetName' => null,
+            'Company' => $user['Sponsors'],
+            'Alt Names' => null,
+            'Latest Update' => $user['First_Posted'],
+            'Originator' => null,
+            'Developer' => null,
+            'Class' => null,
+            'Therapeutic Modality' => null,
+            'Mechanism of Action' => null,
+            'New Molecular Entity' => true,
+            'Indication' => $user['Indication'],
+            'Development Stage' => null,
+            'Recent News' => null,
+            'Category' => null,
+            'Dev Stage Rank' => null,
+            'Therapeutic Area' => null,
+            'Orphan Drug' => false,
+            'Research Program' => null
+        ];
+    }, $users);
+
+case 'nz_us_clinical_trial':
+    return array_map(function ($user) {
+        return [
+            'ID' => $user['id'],
+            'TRIAL ID' => $user['TRIAL_ID'],
+            'ACTRN' => $user['ACTRN'],
+            'SUBMIT DATE' => $user['SUBMIT_DATE'],
+            'APPROVAL DATE' => $user['APPROVAL_DATE'],
+            'STUDY TITLE' => $user['STUDY_TITLE'],
+            'SCIENTIFIC TITLE' => $user['SCIENTIFIC_TITLE'],
+            'UTN' => $user['UTN'],
+            'TRIAL ACRONYM' => $user['TRIAL_ACRONYM'],
+            'LINKED STUDY' => $user['LINKED_STUDY'],
+            'INTERVENTIONS' => $user['INTERVENTIONS'],
+            'COMPARATOR' => $user['COMPARATOR'],
+            'CONTROL' => $user['CONTROL'],
+            'INCLUSIVE CRITERIA' => $user['INCLUSIVE_CRITERIA'],
+            'MIN AGE' => $user['MIN_AGE'],
+            'MIN AGE TYPE' => $user['MIN_AGE_TYPE'],
+            'MAX AGE' => $user['MAX_AGE'],
+            'MAX AGE TYPE' => $user['MAX_AGE_TYPE'],
+            'INCLUSIVE GENDER' => $user['INCLUSIVE_GENDER'],
+            'HEALTHY VOLUNTEERS?' => $user['HEALTHY_VOLUNTEERS?'],
+            'EXCLUSIVE CRITERIA' => $user['EXCLUSIVE_CRITERIA'],
+            'STUDY TYPE' => $user['STUDY_TYPE'],
+            'ALLOCATION' => $user['ALLOCATION'],
+            'CONCEALMENT' => $user['CONCEALMENT'],
+            'SEQUENCE' => $user['SEQUENCE'],
+            'MASKING' => $user['MASKING'],
+            'ASSIGNMENT' => $user['ASSIGNMENT'],
+            'OTHER DESIGN FEATURES' => $user['OTHER_DESIGN_FEATURES'],
+            'ENDPOINT' => $user['ENDPOINT'],
+            'PHASE' => $user['PHASE'],
+            'STATISTICAL METHODS' => $user['STATISTICAL_METHODS'],
+            'PATIENT REGISTRY?' => $user['PATIENT_REGISTRY?'],
+            'REGISTRY FOLLOW-UP' => $user['REGISTRY_FOLLOW-UP'],
+            'REGISTRY FOLLOW-UP TYPE' => $user['REGISTRY_FOLLOW-UP_TYPE'],
+            'TIMING' => $user['TIMING'],
+            'ANTICIPATED START DATE' => $user['ANTICIPATED_START_DATE'],
+            'ACTUAL START DATE' => $user['ACTUAL_START_DATE'],
+            'ANTICIPATED END DATE' => $user['ANTICIPATED_END_DATE'],
+            'ACTUAL END DATE' => $user['ACTUAL_END_DATE'],
+            'TARGET SAMPLE SIZE' => $user['TARGET_SAMPLE_SIZE'],
+            'FINAL SAMPLE SIZE' => $user['FINAL_SAMPLE_SIZE'],
+            'CURRENT SAMPLE SIZE' => $user['CURRENT_SAMPLE_SIZE'],
+            'ANTICIPATED LAST VISIT DATE' => $user['ANTICIPATED_LAST_VISIT_DATE'],
+            'ACTUAL LAST VISIT DATE' => $user['ACTUAL_LAST_VISIT_DATE'],
+            'RECRUITMENT STATUS' => $user['RECRUITMENT_STATUS'],
+            'DATA ANALYSIS' => $user['DATA_ANALYSIS'],
+            'WITHDRAWN REASON' => $user['WITHDRAWN_REASON'],
+            'RECRUITMENT COUNTRY' => $user['RECRUITMENT_COUNTRY'],
+            'RECRUITMENT STATE' => $user['RECRUITMENT_STATE'],
+            'PRIMARY SPONSOR TYPE' => $user['PRIMARY_SPONSOR_TYPE'],
+            'PRIMARY SPONSOR NAME' => $user['PRIMARY_SPONSOR_NAME'],
+            'PRIMARY SPONSOR ADDRESS' => $user['PRIMARY_SPONSOR_ADDRESS'],
+            'PRIMARY SPONSOR COUNTRY' => $user['PRIMARY_SPONSOR_COUNTRY'],
+            'ETHICS STATUS' => $user['ETHICS_STATUS'],
+            'BRIEF SUMMARY' => $user['BRIEF_SUMMARY'],
+            'TRIAL WEBSITE' => $user['TRIAL_WEBSITE'],
+            'PUBLICATION' => $user['PUBLICATION'],
+            'PUBLIC NOTES' => $user['PUBLIC_NOTES'],
+            'SECONDARY ID' => $user['SECONDARY_ID'],
+            'HEALTH CONDITION' => $user['HEALTH_CONDITION'],
+            'CONDITION CATEGORY' => $user['CONDITION_CATEGORY'],
+            'CONDITION CODE' => $user['CONDITION_CODE'],
+            'INTERVENTION CODE' => $user['INTERVENTION_CODE'],
+            'PRIMARY OUTCOME' => $user['PRIMARY_OUTCOME'],
+            'PRIMARY OUTCOME TIMEPOINT' => $user['PRIMARY_OUTCOME_TIMEPOINT'],
+            'SECONDARY OUTCOME' => $user['SECONDARY_OUTCOME'],
+            'SECONDARY OUTCOME TIMEPOINT' => $user['SECONDARY_OUTCOME_TIMEPOINT'],
+            'HOSPITAL' => $user['HOSPITAL'],
+            'MASKING1' => $user['MASKING1'],
+            'MASKING2' => $user['MASKING2'],
+            'MASKING3' => $user['MASKING3'],
+            'PURPOSE' => $user['PURPOSE'],
+            'DURATION' => $user['DURATION'],
+            'SELECTION' => $user['SELECTION'],
+            'URL' => $user['URL']
+        ];
+    }, $users);
+
+    case 'ind_CombOrphan_1':
+    return array_map(function ($user) {
+        return [
+            'ID' => $user['ID'],
+            'Catailyst_Drug_Candidate_ID' => true,
+            'Drug_Name_(original)' => $user['Asset_Name'],
+            'AssetName' => $user['Asset_Name'],
+            'Company' => $user['Company_Name'],
+            'Alt_Names' => null,
+            'Latest_Update' => null,
+            'Originator' => null,
+            'Developer' => null,
+            'Class' => null,
+            'Therapeutic_Modality' => null,
+            'Mechanism_of_Action' => null,
+            'New_Molecular_Entity' => ($user['Indication'] === 'renal cancer') ? true : false,
+            'Indication' => $user['Indication'],
+            'Development_Stage' => 'Phase 1 Results',
+            'Recent_News' => $user['News_Headline'],
+            'Category' => $user['Event_Category'],
+            'Dev_Stage_Rank' => null,
+            'Therapeutic_Area' => null,
+            'Orphan_Drug' => ($user['Group (Categorization)'] === 'Orphan Drug') ? true : false,
+            'Research_Program' => null
+        ];
+    }, $users);
+
+    case 'company_press_release':
+    return array_map(function ($user) {
+        return [
+            'ID' => $user['ID'],
+            'News_Reference' => $user['News Reference'],
+            'Company' => $user['Company'],
+            'URL' => $user['URL'],
+            'News_Headline' => $user['News Headline'],
+            'News_Detail' => $user['News Detail'],
+            'Date_Announced' => $user['Date Announced'],
+            'Reference_Notes' => $user['Reference Notes'],
+            'Article_Text' => $user['Article Text']
+        ];
+    }, $users);
+
+
+case 'company_press_release':
+    return array_map(function ($user)  {
+            return [
+                'pubmed_new' => [
+                    'ID' => $user['ID'],
+                    'Source Name' => $user['Source Name'],
+                    'Company Name' => $user['Company Name'],
+                    'PMID' => $user['PMID'],
+                    'Title' => $user['Title'],
+                    'Authors' => $user['Authors'],
+                    'Citation' => $user['Citation'],
+                    'First Author' => $user['First Author'],
+                    'Journal/Book' => $user['Journal/Book'],
+                    'Publication Year' => $user['Publication Year'],
+                    'Create Date' => $user['Create Date'],
+                    'New Date' => $user['New Date'],
+                    'PMCID' => $user['PMCID'],
+                    'NIHMS ID' => $user['NIHMS ID'],
+                    'DOI' => $user['DOI'],
+                    'Full Text' => $user['Full Text'],
+                    'URL' => $user['URL']
+                ]
+            ];
+    }, $users);
+
+
+case 'PMC_data':
+    return array_map(function (user) {
+        return [
+            'ID' => user['id'],
+            'PPRID' => user['PPRID'],
+            'Title' => user['Title'],
+            'Authors' => user['Authors'],
+            'Citation' => user['Citation'],
+            'First_Author' => user['First_Author'],
+            'Preprint' => user['Preprint'],
+            'Publication_Year' => user['Publication_Year'],
+            'Create_Date' => user['Create_Date'],
+            'DOI' => user['DOI'],
+            'Full_Text' => user['Full_Text'],
+            'URL' => user['URL'],
+            'Is_Preprint' => (user['Preprint'] !== '') ? true : false,
+        ];
+    }, users);
+
+
+
+case 'PMCcompany_presentation_publication_data':
+    return array_map(function ($user) {
+        return [
+            'ID' => $user['ID'],
+            'Company' => $user['Company'],
+            'Website_Link' => $user['Website Link'],
+            'Pdf_Link' => $user['Pdf Link'],
+            'File_Name' => $user['File Name'],
+            'Title' => $user['Title'],
+            'Status' => $user['Status'],
+            'First_Page' => $user['First Page'],
+            'Full_Text' => $user['Full Text'],
+            'URL' => $user['URL'],
+            'Is_Public' => ($user['Status'] === 'Active') ? true : false,
+        ];
+    }, $users);
+
+        
+case 'company_presentation_publication':
+    return array_map(function ($user) {
+    return [
+        'ID' => $user['ID'],
+        'Company' => $user['Company'],
+        'Website Link' => $user['Website Link'],
+        'Pdf Link' => $user['Pdf Link'],
+        'File Name' => $user['File Name'],
+        'Title' => $user['Title'] ?? null,
+        'Status' => $user['Status'],
+        'First Page' => $user['First Page'],
+        'Full Text' => $user['Full Text'],
+        'Presentation Reference' => $user['Presentation Reference'],
+        'Key Information' => $user['Key Information'] ?? null,
+    ];
+}, $users);
+
+

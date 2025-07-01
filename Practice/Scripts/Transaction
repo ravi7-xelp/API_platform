@@ -1,0 +1,259 @@
+case 'acquisition_dealsnippet':
+    return array map(function ($user) {
+        return [
+            'ID' => $user['id'],
+            'News Reference' => $user['News Reference'],
+            'Date Published' => $user['Date Published'],
+            'Title' => $user['Article Title'],
+            'Text' => $user['Article Text'] ?? '',
+            'Company Name' => $user['Company Name'],
+            'Group' => $user['Group'],
+            'Acquisition Type' => $user['Acquisition Type'],
+            'Acquisition Category' => $user['Acquisition Category'],
+            'Asset Name' => $user['Asset Name'],
+            'Asset Number' => $user['Asset Number'],
+            'Indication' => $user['Indication'],
+            'Indication Number' => $user['Indication Number'],
+            'Upfront Text' => $user['Upfront Text'] ?? '',
+            'Milestone Text' => $user['Milestone Text'] ?? '',
+            'Equity Investment Text' => $user['Equity Investment Text'] ?? '',
+            'Royalty Text' => $user['Royalty Text'] ?? '',
+            'News Snippet' => $user['News Snippet'],
+            'Therapeutic Area' => $user['Therapeutic Area'],
+            'Therapeutic Modality' => $user['Therapeutic Modality'],
+            'Development Stage' => $user['Development Stage'],
+            'Source URL' => $user['Source URL'],
+            'Sensitivity' => $user['Sensitivity'],
+            'Additional Links' => $user['Additional Links'] ?? '',
+            'Press Release Company' => $user['Press Release Company'],
+            'Event Type' => $user['Event Type'],
+            'Event Group' => $user['Event Group'],
+        ];
+    },$users);
+
+case 'financing_dealsnippet':
+    return array map(function ($user) {
+        return [
+            'ID' => $user['id'],
+            'News Reference' => $user['News Reference'],
+            'Therapeutic Area' => $user['Therapeutic Area'],
+            'Therapeutic Modality' => $user['Therapeutic Modality'],
+            'Development Stage' => $user['Development Stage'],
+            'Use of Proceeds' => $user['Use of Proceeds'] ?? '',
+            'Underwriters' => $user['Underwriters'] ?? '',
+            'Date Published' => $user['Date Published'],
+            'Currency' => $user['Currency'],
+            'Amount in Millions' => $user['Amount in Millions'],
+            'Title' => $user['Article Title'],
+            'Text' => $user['Article Text'] ?? '',
+            'Company Name' => $user['Company Name'],
+            'Financing Type' => $user['Financing Type'],
+            'Financing Category' => $user['Financing Category'],
+            'Group' => $user['Group (Categorization)'] ?? '',
+            'Asset Name' => $user['Asset Name'],
+            'Asset Number' => $user['Asset Number'],
+            'Indication' => $user['Indication'],
+            'Indication Number' => $user['Indication Number'],
+            'Investors' => $user['Investors'] ?? '',
+            'Investor Reference' => $user['Investor Reference'],
+            'Amount in Millions (all values)' => $user['Amount in Millions (all values)'] ?? '',
+            'Additional URL' => $user['Additional URL'],
+            'Source URL' => $user['Source URL'],
+            '$ Value Confidence' => $user['$ Value Confidence'] ?? '',
+            'Currency (All Values)' => $user['Currency (All Values)'] ?? '',
+        ];
+    },$users);
+    
+
+case 'partnership_dealsnippet':
+    return array map(function ($user) {
+        return [
+            'ID' => $user['ID'],
+            'News Reference' => $user['News Reference'],
+            'Title' => $user['Article Title'],
+            'Text' => $user['News Brief'],
+            'Company' => $user['Company'],
+            'Group' => $user['Group (Categorization)'],
+            'Transaction Type' => $user['Transaction Type'],
+            'Event Type' => $user['Event Type'],
+            'Event Group' => $user['Event Group'],
+            'Transaction Category' => $user['Transaction Category'],
+            'Asset Name' => $user['Asset Name'],
+            'Asset Number' => $user['Asset Number'],
+            'Indication' => $user['Indication'],
+            'Indication Number' => $user['Indication Number'],
+            'Upfront Text' => $user['Upfront Text'] ?? '',
+            'Milestone Text' => $user['Milestone Text'] ?? '',
+            'Equity Investment Text' => $user['Equity Investment Text'] ?? '',
+            'Royalty Text' => $user['Royalty Text'] ?? '',
+            'Therapeutic Area' => $user['Therapeutic Area'],
+            'Therapeutic Modality' => $user['Therapeutic Modality'],
+            'Development Stage' => $user['Development Stage'],
+            'Source URL' => $user['Source URL'],
+            'Key Transaction Information' => $user['Key Transaction Information'] ?? '',
+        ];
+    },$users);
+
+case 'licenseagreement_dealsnippet':
+    return array map(function ($user) {
+    return [
+        'ID' => $user['ID'],
+        'News Reference' => $user['News Reference'],
+        'Date Published' => $user['Date Published'],
+        'Title' => $user['Article Title'],
+        'Text' => $user['Article Text'],
+        'Company' => $user['Company'],
+        'Group' => $user['Group (Categorization)'],
+        'Transaction Type' => $user['Transaction Type'],
+        'Transaction Category' => $user['Transaction Category'],
+        'Asset Name' => $user['Asset Name'],
+        'Asset Number' => $user['Asset Number'],
+        'Indication' => $user['Indication'],
+        'Indication Number' => $user['Indication Number'],
+        'Upfront Text' => $user['Upfront Text'],
+        'Milestone Text' => $user['Milestone Text'],
+        'Equity Investment Text' => $user['Equity Investment Text'],
+        'Royalty Text' => $user['Royalty Text'],
+        'Key Transaction Information' => $user['Key Transaction Information'],
+        'News Brief' => $user['News Brief'],
+        'Therapeutic Area' => $user['Therapeutic Area'],
+        'Therapeutic Modality' => $user['Therapeutic Modality'],
+        'Development Stage' => $user['Development Stage'],
+        'Source URL' => $user['Source URL'],
+        'Event Type' => $user['Event Type'],
+        'Event Group' => $user['Event Group'],
+    ];
+},$users);
+
+
+case 'Deal_contracts':
+    return array map(function($user) {
+        return [
+            'ID' => $user['id'],
+            'Catalyst Deal Number' => $user['Catailyst Deal Number'],
+            'Date' => $user['Date'],
+            'Company Name' => $user['Company Name'],
+            'Company Institute' => $user['Company Institute'],
+            'Deal Type' => $user['Deal Type'],
+            'Deal Title' => $user['Deal title'],
+            'Exhibit Link' => $user['Exhibit Link'],
+            'Form Type' => $user['FormType'],
+            'Published Year' => $user['Published year'],
+            'Publish Date' => $user['publish date'],
+            'URL' => $user['URL'],
+            'Exhibit Link P' => $user['Exhibit Link P'],
+            'Exhibit File Name' => $user['Exhibit File Name']
+        ];
+    },$users);
+
+
+
+case 'company_press_release':
+    return array map(function ($user) {
+        return [
+            'ID' => $user['ID'],
+            'News Reference' => $user['News Reference'],
+            'Company' => $user['Company'],
+            'URL' => $user['URL'],
+            'News Headline' => $user['News Headline'],
+            'News Detail' => $user['News Detail'],
+            'Date Announced' => $user['Date Announced'],
+            'Reference Notes' => $user['Reference Notes'],
+            'Article Text' => $user['Article Text']
+        ];
+    },$users);
+
+case 'Acquisitions':
+    return array map(function ($ user) {
+    return [
+        'ID' => $user['id'],
+        'Catalyst Deal Number' => $user['Catailyst_Deal_Number'],
+        'Company Name' => $user['Company_Name'],
+        'Date' => $user['Date'],
+        'Transaction Type' => $user['Transaction_Type'],
+        'Deal Type' => $user['Deal_Type'],
+        'Transaction Value (In USD Millions)' => $user['Transaction_Value_(In_USD$_Millions)'],
+        'Stage at Announcement' => $user['Stage_at_Announcement'],
+        'Buyer' => $user['Buyer'],
+        'Seller' => $user['Seller'],
+        'Transaction in Brief' => $user['Transaction_in_Brief'],
+        'Companies in the Deal' => $user['Companies_in_the_Deal'],
+        'Assets in Transaction' => $user['Assets_in_Transaction'],
+        'Technology Platforms' => $user['Technology_Platforms'],
+        'Therapeutic Modality' => $user['Therapeutic_Modality'],
+        'Therapeutic Area' => $user['Therapeutic_Area'],
+        'Molecular Target' => $user['Molecular_Target'],
+        'Mechanism of Action' => $user['Mechanism_of_Action'],
+        'Deal Status' => $user['Deal_Status'],
+        'R&D and Regulatory Milestones' => $user['R&D_and_Regulatory_Milestones'],
+        'Sales-Based Milestones' => $user['Sales-Based_Milestones'],
+        'Deal Terms' => $user['Deal_Terms'],
+        'Total Transaction Value' => $user['Total_Transaction_Value'],
+        'Upfront Cash' => $user['Upfront_Cash'],
+        'Upfront Equity' => $user['Upfront_Equity'],
+        'Total Milestone Payments' => $user['Total_Milestone_Payments'],
+        'Royalty (%)' => $user['Royalty_(%)'],
+        'R&D and Regulatory Milestones (do not display)' => $user['R&D_and_Regulatory_Milestones_(do_not_display)'],
+        'Sales-Based Milestones (do not display)' => $user['Sales-Based_Milestones_(do_not_display)'],
+        'Year Announced' => $user['Year_Announced'],
+        'Deal Type 1' => $user['Deal_Type_.1'],
+        'AssetClass' => $user['AssetClass'],
+        'Rare Orphan Disease' => $user['Rare_Orphan_Disease'],
+        'Other Company' => $user['Other_Company']
+    ];
+},$users);
+case 'License_Agreements':
+    return array map(function transformuser($user) {
+    return [
+        'id' => $user['id'],
+        'Catalyst Deal Number' => $user['Catailyst_Deal_Number'],
+        'Company Name' => $user['Company_Name'],
+        'Date' => $user['Date'],
+        'Transaction Type' => $user['Transaction_Type'],
+        'Licensor(s)' => $user['Licensor(s)'],
+        'Licensee(s)' => $user['Licensee(s)'],
+        'Transaction in Brief' => $user['Transaction_in_Brief'],
+        'License Exclusivity Status' => $user['License_Exclusivity_Status'],
+        'Total Transaction Value (In USD Millions)' => $user['Total_Transaction_Value_(In_USD$_Millions)'],
+        'Total Deal Value' => $user['Total_Deal_Value'],
+        'Total Deal Value.1' => $user['Total_Deal_Value.1'],
+        'Deal Value (at Annoucment)' => $user['Deal_Value_(at_Annoucment)'],
+        'Total Deal Value.2' => $user['Total_Deal_Value.2'],
+        'Upfront Cash' => $user['Upfront_Cash'],
+        'Total Milestone Payments' => $user['Total_Milestone_Payments'],
+        'Royalty (%)' => $user['Royalty_(%)'],
+        'Companies in the Deal' => $user['Companies_in_the_Deal'],
+        'Territories (Licensed)' => $user['Territories_(Licensed)'],
+        'Drug Product Type' => $user['Drug_Product_Type'],
+        'Number of Products' => $user['Number_of_Products'],
+        'Product Names' => $user['Product_Names'],
+        'Therapeutic Modality' => $user['Therapeutic_Modality'],
+        'Therapeutic Area' => $user['Therapeutic_Area'],
+        'Molecular Target' => $user['Molecular_Target'],
+        'Mechanism of Action' => $user['Mechanism_of_Action'],
+        'Deal Status' => $user['Deal_Status'],
+        'Upfront Equity' => $user['Upfront_Equity'],
+        'Option Exclusivity Payment' => $user['Option_Exclusivity_Payment'],
+        'Option Exercise Payment' => $user['Option_Exercise_Payment'],
+        'R&D Funding' => $user['R&D_Funding'],
+        'R&D and Regulatory Milestones' => $user['R&D_and_Regulatory_Milestones'],
+        'Sales-Based Milestones' => $user['Sales-Based_Milestones'],
+        'Profit Split (%)' => $user['Profit_Split_(%)'],
+        'Deal Termination Reason' => $user['Deal_Termination_Reason'],
+        'TechnologyPlatforms' => $user['TechnologyPlatforms'],
+        'AssetClass' => $user['AssetClass'],
+        'Deal Terms & Status' => $user['Deal_Terms_&_Status'],
+        'Stage at Annoucement' => $user['Stage_at_Annoucement'],
+        'Asset | Technology Type' => $user['Asset_|_Technology_Type'],
+        'Number of Asset Types' => $user['Number_of_Asset_Types'],
+        'Licensed Market Type' => $user['Licensed_Market_Type'],
+        'Partnership Scope' => $user['Partnership_Scope'],
+        'Royalty' => $user['Royalty'],
+        'Year Announced' => $user['Year_Announced'],
+        'Rare Orphan' => $user['Rare_Orphan'],
+    ];
+},$users);
+case 'acquisition dealsnippet':
+    return array map(,$users);\
+case 'acquisition dealsnippet':
+    return array map(,$users);
