@@ -38,3 +38,18 @@ export interface LoadTestStatus {
   failures?: string;
   total_requests?: string;
 }
+
+export interface TestCase {
+  id: number;
+  name: string;
+  folder_id: number;
+  path: string;
+  created_at: string;
+}
+
+export interface Folder {
+  id: number;
+  name: string;
+  created_at: string;
+  testcases?: TestCase[];
+}

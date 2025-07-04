@@ -147,8 +147,7 @@ const Performance: React.FC = () => {
         value={numRequests}
         onChange={e => setNumRequests(Number(e.target.value))}
         className="ant-input"
-        style={{ width: 120 }}
-      />
+        style={{ width: 100 ,backgroundColor: '#f5f5f5',color: '#999', borderRadius: '5px', border: '4px solid #ddd'}}/>
     </div>
     <div>
       <label className="block text-sm font-medium text-gray-700 mb-2">

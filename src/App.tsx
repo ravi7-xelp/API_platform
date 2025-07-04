@@ -5,7 +5,13 @@ import Sidebar from './components/Sidebar';
 import Dashboard from './pages/Dashboard';
 import ApiList from './pages/ApiList';
 import Performance from './pages/Performance';
+import SuitesManager from './pages/SuitesManager';
+import GenerateTestCaseModal from './components/GenerateTestCaseModal';
 import { ApiProvider } from './context/ApiContext';
+import TestCaseManagementPage from './pages/TestCaseManagementPage';
+import TestCaseResults from './pages/TestCaseResults';
+
+<Route path="/TestCaseResults" element={<TestCaseResults />} />
 
 function App() {
   return (
@@ -20,6 +26,9 @@ function App() {
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/apis" element={<ApiList />} />
                 <Route path="/performance" element={<Performance />} />
+                {/* <Route path="/suites" element={<SuitesManager />} /> */}
+                <Route path="/testcases" element={<TestCaseManagementPage />} />
+                <Route path="/TestCaseResults" element={<TestCaseResults />} />
               </Routes>
             </main>
           </div>

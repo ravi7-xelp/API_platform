@@ -20,8 +20,11 @@ import subprocess
 import threading
 import time
 import shlex
+from app import folders, testcases
 
 app = FastAPI(title="API Testing Automation Platform")
+app.include_router(folders.router, prefix="/api")
+app.include_router(testcases.router, prefix="/api")
 
 # Configure CORS
 app.add_middleware(
@@ -838,6 +841,17 @@ async def delete_api(api_id: str):
     if len(apis) == initial_count:
         raise HTTPException(status_code=404, detail="API not found")
     return {"message": "API deleted successfully", "api_id": api_id}
+
+app.include_router(folders.router, prefix="/api")
+app.include_router(testcases.router, prefix="/api")
+
+@app.get("/debug/routes")
+def list_routes():
+    from fastapi.routing import APIRoute
+    return [
+        {"path": route.path, "methods": list(route.methods)}
+        for route in app.routes if hasattr(route, 'methods')
+    ]
 
 if __name__ == "__main__":
     import uvicorn

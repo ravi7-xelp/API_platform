@@ -4,7 +4,8 @@ import {
   HomeIcon, 
   ListBulletIcon, 
   ChartBarIcon,
-  BoltIcon
+  BoltIcon,
+  DocumentCheckIcon
 } from '@heroicons/react/24/outline';
 
 const Sidebar: React.FC = () => {
@@ -14,6 +15,8 @@ const Sidebar: React.FC = () => {
     { path: '/', name: 'Dashboard', icon: HomeIcon },
     { path: '/apis', name: 'API List', icon: ListBulletIcon },
     { path: '/performance', name: 'Performance', icon: ChartBarIcon },
+    { path: '/testcases', name: 'Test Case Management', icon: BoltIcon },
+    { path: '/TestCaseResults', name: 'Test Case Results', icon: DocumentCheckIcon },
   ];
 
   return (
